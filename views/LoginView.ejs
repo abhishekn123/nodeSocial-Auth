@@ -1,0 +1,12 @@
+<div id="profile">
+
+</div>
+<script>
+  fetch("<%=data.url %>", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body:"<%-  JSON.parse(data.config) %>"
+  }).then((data) =>document.getElementById('profile').innerHTML=data );
+</script>
